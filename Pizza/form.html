@@ -1,142 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <div>
-    <header>
-      <div id="haut-gauche">
-        <p>
-          <img src="media/4f3cb76c.png" alt="logo" width="200px" height="200px" />
-        </p>
-      </div>
-      <div id="haut-droite">
-        <h1>Pizza 1 <sup>er</sup> Choix</h1>
-      </div>
-      <<nav>
-        <a href="index.html">
-          <p>Accueil</p>
-        </a>
-        <a href="form.html">
-          <p>Formulaire Pizza</p>
-        </a>
-        <a href="client.html">
-          <p>Client</p>
-        </a>
-        <a href="medias.html">
-          <p>Medias</p>
-        </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <div id="haut-gauche">
+          <p>
+            <img
+              src="media/4f3cb76c.png"
+              alt="logo"
+              width="200px"
+              height="200px"
+            />
+          </p>
+        </div><div id="haut-droite">
+          <h1>Pizza 1 <sup>er</sup> Choix</h1>
+        </div>
+        <<nav>
+          <a href="index.html"> <p>Accueil</p> </a>
+          <a href="form.html"> <p>Formulaire Pizza</p> </a>
+          <a href="client.html"> <p>Client</p> </a>
+          <a href="medias.html"> <p>Medias</p> </a>
         </nav>
-    </header>
+      </header>
+      <section>
+      
+        <h1>Formulaire de commande de pizzas</h1>
 
-    <section>
-      <h1>Formulaire de commande de pizzas</h1>
-
-      <!-- field set identitification -->
-
-      <form id="form" method="GET" action="traitement.php">
+        
+        <form id="myForm" method="POST" action="process.php">
+          <!-- field set identitification -->
         <fieldset>
-          <legend> <strong>IDENTIFICATION</strong> </legend>
-          <div>
-            <p>Utilisateur</p>
-            <p>
-              <input id="user" name="user" type="text" value="" placeholder="Entrez votre nom d'utilisateur" />
-            <br>
-              <p id="errUser" class="error"></p>
-            </p>
+          <legend> <strong>IDENTIFICATION</strong>  </legend>
 
+          <!-- Champ utilisateur -->
+
+          <div>
+            <p>Utilisateurf</p>
+            <p>
+              <input id="user" type="text" name="user" placeholder="Entrez votre nom d'utilisateur"/></p>
+              <p id="err-user" class="error"></p>
+            </div>
+
+            <!-- Champ mot de passe -->
+            <div>
             <p>Mot de passe</p>
             <p>
-              <input id="mdp" name="mdp" type="password" value="" placeholder="Entrez votre mot de passe" />
-            <p id="errMdp" class="error"></p>
-            </p>
-
-          </div>
+              <input id="pass" name="pass" type="password"placeholder="Entrez votre mot de passe "/></p>
+             <p id="err-pass" class="error"></p>
+            </div>
+            
+           
         </fieldset>
-
-
 
         <fieldset>
           <legend>COMMANDES</legend>
           <div>
-            <!-- RADIO -->
+          <!-- RADIO -->
             <p>Taille</p>
             <p>
-              <input name="taille" type="radio" value="S" id="small" />
+              <input
+              name="taille"
+              type="radio"
+              value="S"
+              id="small"
+              />
               <label for="small">S</label>
-
-
-              <input id="medium" name="taille" type="radio" value="M" />
+            
+            
+              <input
+              id="medium"
+              name="taille"
+              type="radio"
+              value="M"
+              />
               <label for="medium">M</label>
-
-
-              <input name="taille" type="radio" value="S" id="large" />
+            
+            
+              <input
+              name="taille"
+              type="radio"
+              value="S"
+              id="large"
+              />
               <label for="large">L</label>
-
-
-              <input name="taille" type="radio" value="S" id="extra" />
+            
+            
+              <input
+              name="taille"
+              type="radio"
+              value="S"
+              id="extra"
+              />
               <label for="extra">XL</label>
             </p>
-            <p>id="err-user" class="error"</p>
+             <p>id="err-taille" class="error"</p> 
 
             <br>
             <!-- CHECKBOX -->
             <p>INGREDIENTS</p>
             <p>
-              <input name="ingredient[]" type="checkbox" value="" checked="checked" />
+              <input
+              name="ingredient[]"
+              type="checkbox"
+              value=""
+              checked="checked"
+              />
               <label for="tomates">TOMATES</label>
-
-
-              <input name="ingredient[]" type="checkbox" value="" />
+            
+            
+              <input
+              name="ingredient[]"
+              type="checkbox"
+              value=""
+              />
               <label for="mozzarella">MOZARELLA</label>
-
-
-              <input name="ingredient[]" type="checkbox" value="" />
+            
+            
+              <input
+              name="ingredient[]"
+              type="checkbox"
+              value=""
+              />
               <label for="jambon">JAMBON</label>
+            
+            
+              <input
+              name="ingredient[]"
+              type="checkbox"
 
-
-              <input name="ingredient[]" type="checkbox" value="" />
+              value=""
+              />
               <label for="chorrizzo">CHORRIZZO</label>
             </p>
+            <p id="err-ingredient" class="error"></p> 
 
-            <br> <br>
+            <br>  <br>
 
             <p>
 
-            <p>PAIEMENTS</p>
-            <select name="payement" id="paiement" size="1">
-              <option value="-1" selectedu"selected>choisir moyen de paiement</option>
-              <option value="cb">Carte bleu</option>
-              <option value="espece">Especes</option>
-              <option value="bon ">Bon d'achat</option>
-              <option value="plonge">Plonge</option>
+              <p>PAIEMENTS</p>
 
+              <p>
 
-            </select>
-
+                <select name="payement" id="paiement" size="1">
+                  <option value="-1" selectedu"selected >choisir moyen de paiement</option>
+                  <option value="cb">Carte bleu</option>
+                  <option value="espece">Especes</option>
+                  <option value="bon ">Bon d'achat</option>
+                  <option value="plonge">Plonge</option>
+                </select>
+              </p>
+              <p id="err-payement" class="error"> </p> 
+            
+             
             </p>
+            
+
+
+               
+               
+           
+             
             </p>
             <p id="error-user"></p>
           </div>
         </fieldset>
         <!-- <button type="submit">ENVOYER</button> -->
-        <p><input id="bt-check" type="submit" value="envoyer"></p>
+        <p><input id="bt-check" type="button" value="envoyer"></p>
 
       </form>
-    </section>
 
-    <footer>
-      <p id="p2">copyright 2021 crée par Filipe afpa2021</p>
-    </footer>
-  </div>
-  <script src="app.js"></script>
-</body>
-
+      </section>
+      <footer>
+        <p id="p2">copyright 2021 crée par Filipe afpa2021</p>
+      </footer>
+    </div>
+    <script src="/app.js"></script>
+  </body>
 </html>
+
+
+
+
+
